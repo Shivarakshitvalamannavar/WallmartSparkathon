@@ -1,0 +1,97 @@
+.smart-assistant-container {
+    padding: 30px;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0071dc;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    width: 250px;
+  }
+  
+  .inputs-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .inputs-row input {
+    padding: 10px;
+    width: 180px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .category-bar {
+    margin-bottom: 20px;
+  }
+  
+  .category-bar button {
+    margin-right: 10px;
+    padding: 8px 14px;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .category-bar .active {
+    background-color: #0071dc;
+    color: white;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-card {
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+    width: 200px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .product-card h3 {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .product-card button {
+    background: #0071dc;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .suggestion {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+  }
+  
