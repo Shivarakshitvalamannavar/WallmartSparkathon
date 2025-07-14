@@ -806,7 +806,7 @@ const CATEGORY_PRODUCTS: Record<string, any[]> = {
 
 export function MockStore() {
   const { showPopup, updateUserProfile, userProfile, popupsDisabled, enablePopups } = usePopup()
-  const { addToCart } = useCart()
+  const { addToCart ,addToQuickCart} = useCart()
   const [viewedItems, setViewedItems] = useState<Set<string>>(new Set())
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
 
@@ -959,6 +959,27 @@ export function MockStore() {
                 <ShoppingCart size={16} />
                 Add to Cart
               </button>
+              <button 
+  className="add-to-quick-cart"
+  onClick={(e) => {
+    e.stopPropagation()
+    addToQuickCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      originalPrice: product.originalPrice,
+      discount: Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100),
+      quantity: 1,
+      image_url: product.image,
+      category: product.category
+    })
+    alert(`Added ${product.name} to Quick Cart!`)
+  }}
+>
+  <ShoppingCart size={16} />
+  Add to Quick Cart
+</button>
+
             </div>
           ))}
         </div>

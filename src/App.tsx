@@ -48,9 +48,11 @@ import { MockStore } from './components/MockStore'
 import { AdminDashboard } from './components/AdminDashboard'
 import { Navigation } from './components/Navigation'
 import { Cart } from './components/Cart'
+import { QuickCart } from './components/QuickCart'
 import HomePage from './components/HomePage'
 import SmartAssistant from './components/SmartAssistant'
 import './App.css'
+import './container.css'
 
 // 🔧 Updated Page type
 type Page = 'home' | 'store' | 'dashboard' | 'assistant'
@@ -75,9 +77,11 @@ function App() {
               <AdminDashboard />
             )}
           </main>
-
           <ClearancePopup />
-          <Cart />
+          
+          <QuickCart /> 
+          {/* <Cart />  */}
+          
         </div>
       </PopupProvider>
     </CartProvider>
